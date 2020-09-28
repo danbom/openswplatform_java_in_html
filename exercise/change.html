@@ -1,0 +1,22 @@
+<html>
+    <head></head>    
+    <body>
+        <script = "text/javascript">
+            var colorVal;
+            function backColor(){
+                colorValue = document.getElementById("colorVal");
+                document.bgColor=colorValue.value; //변경
+            }
+            function textColor(){
+                colorValue = document.getElementById("colorVal");
+                document.fgColor = colorValue.value;//변경
+            }
+    
+    </script>
+    <input type="text" id= "colorVal" value=""><p>
+    <button onclick="backColor()"> Change background color </button>
+    <button onclick="textColor()" > Change font color </button>
+    <p>
+    font color
+    </body>
+    </html>

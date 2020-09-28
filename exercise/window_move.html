@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <script = "text/javascript">
+        var newWin;
+        function newOpen(){
+            newWin = window.open('ehandler_Ex1.html','','width=600,height=300');
+        }
+        function windowMove(){
+            newWin = window.open('ehandler_Ex1.html','','width=600,height=300'); //추가
+            var xdist = document.getElementById("setX");
+            var ydist = document.getElementById("setY");
+            newWin.moveBy(xdist.value, ydist.value);
+            newWin.focus();
+        }
+        </script>
+
+        <button onclick="newOpen()"> Open a new window </button>
+        X: <input type = "text" id = "setX" value = "0" >
+        Y: <input type = "text" id = "setY" value = "0" ><p>
+            <button onclick = "windowMove()">Move the window</button>
+    </body>
+</html>

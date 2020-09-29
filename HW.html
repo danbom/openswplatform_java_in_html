@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset = "UTF-8">
+    </head>
+    <body onload = "init();">
+        <form name = "test" onsubmit="register()" onreset="reWrite()" >
+        ID : <input type = "text" name = "id" size = "20" value = ""><p></p>
+        PASSWORD : <input type = "password" name = "password" size = "10" value = ""><p></p>
+        <input type="submit" name = 'btn1' value = 'JOIN'>
+        <input type="reset" name = 'btn2' value = 'RESET'>
+    </form>
+    <script = "text/javascript">
+    function register(){
+        document.test.submit();
+        if (document.test.id.value == "")
+            alert("ID를 입력하세요");
+        else if (document.test.password.value =="") alert("PassWord를 입력하세요.");
+        else if ((document.test.password.value.length<8)||(document.test.password.value.length>13)) alert("8자 이상 12자 이하로 입력해주세요");
+        else alert("회원가입을 축하합니다! \n\n id : "+document.test.id.value+"\n");
+    }
+    function reWrite(){
+        document.test.reset();
+        alert("ID가 변경되었습니다.");
+    }
+    function init(){
+        document.test.id.focus();
+    }
+    </script>
+    </body>
+</html>
